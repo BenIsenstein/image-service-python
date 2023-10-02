@@ -37,8 +37,8 @@ def upload_file():
         if do_files_exist:
             raise Exception('pdf and html files for this email already exist')
         
-        pdf_file.upload_from_file(io.BytesIO(pdf_bytes))
-        html_file.upload_from_string(html)
+        pdf_file.upload_from_file(io.BytesIO(pdf_bytes), content_type='application/pdf')
+        html_file.upload_from_string(html, content_type='text/html')
 
         return {
             "pdfUrl": pdf_file.public_url,
