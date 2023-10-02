@@ -48,4 +48,4 @@ def upload_file():
         return f'An error occurred: {e}', 500
 
 if __name__ == '__main__':
-    app.run(host='[::]', port=8080)
+    app.run(host='[::]', port=os.environ['PORT'] if os.environ['PORT'] else 8080)
