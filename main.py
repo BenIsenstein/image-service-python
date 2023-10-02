@@ -18,7 +18,7 @@ bucket = storage_client.bucket(os.environ['ARTICLES_BUCKET_NAME'])
 def confirm_health_check():
     return 'All healthy!', 200
 
-@app.route('/upload', methods=['POST'])
+@app.route('/api/upload', methods=['POST'])
 def upload_file():
     try:
         body = request.get_json()
