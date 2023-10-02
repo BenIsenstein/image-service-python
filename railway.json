@@ -1,0 +1,16 @@
+{
+    "$schema": "https://railway.app/railway.schema.json",
+    "build": {
+        "nixpacksPlan": {
+            "phases": {
+                "setup": {
+                    "nixPkgs": ["...","wkhtmltopdf"]
+                }
+            }
+        }
+    },
+    "deploy": {
+        "healthcheckPath": "/health",
+        "healthcheckTimeout": 10
+    }
+}
