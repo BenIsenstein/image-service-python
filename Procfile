@@ -1,1 +1,1 @@
-web: gunicorn -b '[${HOST}]:${PORT}' main:app
+web: gunicorn -b [::]:${PORT} main:app
