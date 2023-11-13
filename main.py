@@ -31,7 +31,7 @@ def upload_file():
 
         try:
             do_files_exist = pdf_file.exists() and html_file.exists()
-        except Exception as e:
+        except:
             do_files_exist = False
         
         if do_files_exist:

@@ -10,4 +10,4 @@ capture_output = True
 
 proxy_allow_ips = '*'
 
-timeout = 300
+timeout = 600
